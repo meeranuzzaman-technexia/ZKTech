@@ -1,0 +1,86 @@
+/* ===== PRELOADER · tiny dark-purple ball drop =====
+   Replaces the old .preloader styles (you can delete those). */
+
+.drop-loader {
+  --size: clamp(10px, 1.2vw, 16px); /* ball size */
+  --ring: min(60vmin, 520px); /* final size of the shockwave ring */
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #000;
+  overflow: hidden;
+  will-change: opacity; /* keeps the final dissolve on the GPU */
+  transform: translateZ(0);
+}
+
+/* soft purple bloom, centered on the impact point (50% / 72%) */
+.drop-loader__glow {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 72%; /* keep in sync with GROUND */
+  background: radial-gradient(
+    circle at 50% 72%,
+    #5f30ea 0%,
+    #4a1fd0 28%,
+    #2c0f94 58%,
+    rgba(14, 5, 48, 0) 100%
+  );
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* thin ground line */
+.drop-loader__ground {
+  position: absolute;
+  top: 72%; /* keep in sync with GROUND in Preloader.jsx */
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: min(60vw, 600px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(109, 59, 245, 0.55), transparent);
+  transform-origin: 50% 50%;
+}
+
+/* contact shadow under the ball */
+.drop-loader__shadow {
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  width: calc(var(--size) * 2.4);
+  height: 5px;
+  margin: -2.5px 0 0 calc(var(--size) * -1.2);
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(109, 59, 245, 0.65), transparent 70%);
+  filter: blur(2px);
+}
+
+/* the ball */
+.drop-loader__ball {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: var(--size);
+  height: var(--size);
+  margin-left: calc(var(--size) / -2);
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #8461ff 0%, #6d3bf5 38%, #4a1fd0 74%, #2c0f94 100%);
+  box-shadow:
+    0 0 14px rgba(109, 59, 245, 0.65),
+    0 0 40px rgba(109, 59, 245, 0.28);
+  will-change: transform;
+}
+
+/* shockwave ring, centered where the ball touches the ground */
+.drop-loader__ring {
+  position: absolute;
+  left: 50%;
+  top: calc(72% - var(--size) / 2);
+  width: var(--ring);
+  height: var(--ring);
+  margin: calc(var(--ring) / -2) 0 0 calc(var(--ring) / -2);
+  border: 2px solid #6d3bf5;
+  border-radius: 50%;
+  opacity: 0;
+  will-change: transform, opacity;
+}

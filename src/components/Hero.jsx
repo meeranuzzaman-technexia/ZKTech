@@ -7,7 +7,7 @@ import { scrollToTarget } from '../hooks/useSmoothScroll'
 import HeroScene, { isWebGLAvailable } from './three/HeroScene'
 import HeroEmblem from './three/HeroEmblem'
 import Marquee from './Marquee'
-import '../styles/Hero.css'
+// import '../styles/Hero.css'
 
 const WORD_SPEED = [1.35, 1, 1.2, 0.75]
 

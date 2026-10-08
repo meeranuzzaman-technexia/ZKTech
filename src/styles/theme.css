@@ -267,7 +267,7 @@
 }
 
 :root[data-theme='light'] .cta {
-  background: #fff;
+  background: radial-gradient(120% 120% at 20% 120%, rgba(109, 59, 245, 0.28), transparent 62%), #fff;
 }
 
 :root[data-theme='light'] .cta .cta__card {

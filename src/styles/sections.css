@@ -4,7 +4,7 @@
 
 /* ================= SECTION 2 · MANIFESTO (image-2 reference) ============== */
 .manifesto {
-  background: linear-gradient(180deg, #07070c 0%, #0a0a12 55%, #07070c 100%);
+  background: linear-gradient(180deg, #070707 0%, #0a0a0a 55%, #070707 100%);
   border-top: 1px solid var(--line);
 }
 
@@ -20,7 +20,7 @@
   border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 4 / 5;
-  background: #101018;
+  background: #101010;
   will-change: transform;
 }
 
@@ -35,7 +35,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 45%, rgba(6, 6, 12, 0.72));
+  background: linear-gradient(180deg, transparent 45%, rgba(6, 6, 6, 0.72));
 }
 
 .manifesto__badge {
@@ -49,7 +49,7 @@
   padding: 0.6rem 0.95rem;
   border-radius: 100px;
   border: 1px solid rgba(255, 255, 255, 0.22);
-  background: rgba(8, 8, 14, 0.55);
+  background: rgba(8, 8, 8, 0.55);
   backdrop-filter: blur(10px);
   font-family: var(--font-mono);
   font-size: 0.58rem;
@@ -61,7 +61,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #4ade80;
+  background: #3752a5;
 }
 
 .manifesto__copy {
@@ -93,7 +93,7 @@
   font-size: clamp(1.2rem, 2.2vw, 2.1rem);
   line-height: 1.2;
   letter-spacing: -0.03em;
-  color: rgba(169, 140, 255, 0.85);
+  color: #3752a5;
   max-width: 34ch;
 }
 
@@ -204,7 +204,7 @@
   border-radius: 10px;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 30px 70px -30px rgba(30, 8, 0, 0.6);
+  box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.6);
   height: clamp(230px, 46vh, 460px);
 }
 
@@ -234,7 +234,7 @@
   bottom: 0.85rem;
   padding: 0.4rem 0.7rem;
   border-radius: 100px;
-  background: rgba(15, 15, 20, 0.72);
+  background: rgba(15, 15, 15, 0.72);
   backdrop-filter: blur(8px);
   font-family: var(--font-mono);
   font-size: 0.54rem;
@@ -289,7 +289,7 @@
 
 /* ================= SECTION 4 · SERVICES LIST ============================== */
 .services {
-  background: #06060a;
+  background: #060606;
   position: relative;
 }
 
@@ -438,7 +438,7 @@
 
 /* ================= SECTION 5 · PROCESS =================================== */
 .process {
-  background: linear-gradient(180deg, #06060a, #0a0a12 40%, #06060a);
+  background: linear-gradient(180deg, #060606, #0a0a0a 40%, #060606);
   border-top: 1px solid var(--line);
 }
 
@@ -481,7 +481,7 @@
   height: 9px;
   border-radius: 50%;
   background: var(--violet-lt);
-  box-shadow: 0 0 0 6px rgba(109, 59, 245, 0.16);
+  box-shadow: 0 0 0 6px rgba(55, 82, 165, 0.16);
   opacity: 0;
   transition: opacity 0.6s var(--ease);
 }
@@ -518,9 +518,10 @@
   font-size: 0.58rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--violet-lt);
+  color: #fff;
+  background: #3752a5;
   padding: 0.35em 0.8em;
-  border: 1px solid rgba(169, 140, 255, 0.34);
+  border: 1px solid #3752a5;
   border-radius: 100px;
 }
 
@@ -537,7 +538,7 @@
 
 /* ================= SECTION 6 · PROOF ==================================== */
 .proof {
-  background: #06060a;
+  background: #060606;
   border-top: 1px solid var(--line);
 }
 
@@ -562,7 +563,7 @@
 }
 
 .stat:hover {
-  background: rgba(109, 59, 245, 0.07);
+  background: rgba(55, 82, 165, 0.07);
 }
 
 
@@ -632,7 +633,7 @@
   padding: clamp(1.6rem, 3vw, 2.6rem);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: linear-gradient(160deg, rgba(109, 59, 245, 0.14), rgba(255, 255, 255, 0.015));
+  background: linear-gradient(160deg, rgba(55, 82, 165, 0.14), rgba(255, 255, 255, 0.015));
   min-height: 320px;
   display: grid;
   align-content: space-between;
@@ -772,14 +773,14 @@
 .chip:hover {
   color: var(--ink);
   border-color: var(--violet-lt);
-  background: rgba(109, 59, 245, 0.16);
+  background: rgba(55, 82, 165, 0.16);
 }
 
 /* ================= CONTACT / CTA ======================================== */
 .cta {
   position: relative;
   overflow: hidden;
-  background: radial-gradient(120% 120% at 20% 120%, rgba(109, 59, 245, 0.55), transparent 62%), #050507;
+  background: radial-gradient(120% 120% at 20% 120%, rgba(55, 82, 165, 0.55), transparent 62%), #050505;
   border-top: 1px solid var(--line);
   padding-block: clamp(4.5rem, 10vw, 10rem);
 }
@@ -822,8 +823,8 @@
 }
 
 .cta__card:hover {
-  background: rgba(109, 59, 245, 0.16);
-  border-color: rgba(169, 140, 255, 0.5);
+  background: rgba(55, 82, 165, 0.16);
+  border-color: rgba(55, 82, 165, 0.5);
   transform: translateX(6px);
 }
 

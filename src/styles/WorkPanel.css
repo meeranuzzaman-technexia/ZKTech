@@ -8,7 +8,7 @@
 
 /* Global font and palette */
 :root {
-  --color-accent: #9279da;
+  --color-accent: #3752a5;
   --color-black: #000000;
   --color-white: #ffffff;
 
@@ -51,6 +51,7 @@ select {
   --work-muted: rgba(255, 255, 255, 0.68);
   --work-line: rgba(255, 255, 255, 0.2);
   --work-accent: var(--color-accent);
+  --work-accent-text: #bfbfbf;
   --work-hover-delay: 90ms;
 
   width: 100%;
@@ -85,7 +86,7 @@ select {
   grid-column: 1;
   display: block;
   margin: 8px 0 0;
-  color: var(--work-accent);
+  color: #3752a5;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -146,7 +147,7 @@ select {
   content: "";
 }
 
-/* Project blocks: black initially, purple on hover/focus */
+/* Project blocks: black initially, blue on hover/focus */
 .work-project {
   width: 100%;
   padding-block: 0 46px;
@@ -231,7 +232,7 @@ select {
 
 .work-project__arrow {
   display: inline-block;
-  color: var(--work-accent);
+  color: var(--work-accent-text);
   transition:
     color 700ms ease,
     transform 950ms ease;
@@ -253,26 +254,27 @@ select {
   letter-spacing: -0.015em;
 }
 
+/* Details: blue by default, white when the project turns blue on hover/focus */
 .work-project__details {
   min-width: 0;
-  color: var(--work-text);
+  color: var(--work-accent);
   font-size: 10px;
   font-weight: 600;
   line-height: 1.65;
   text-transform: uppercase;
+  transition: color 700ms ease;
+}
+
+.work-project:hover .work-project__details,
+.work-project:focus-within .work-project__details {
+  color: var(--work-text);
 }
 
 .work-project__tags {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: var(--work-accent);
-  transition: color 700ms ease;
-}
-
-.work-project:hover .work-project__tags,
-.work-project:focus-within .work-project__tags {
-  color: var(--work-text);
+  color: inherit;
 }
 
 .work-project__tags span {
@@ -282,13 +284,7 @@ select {
 .work-project__place {
   display: block;
   margin-top: 19px;
-  color: var(--work-muted);
-  transition: color 700ms ease;
-}
-
-.work-project:hover .work-project__place,
-.work-project:focus-within .work-project__place {
-  color: var(--work-text);
+  color: inherit;
 }
 
 /* Gallery dropdown */
@@ -497,6 +493,11 @@ select {
     transition: none;
   }
 
+  .work-project__details {
+    color: var(--work-text);
+    transition: none;
+  }
+
   .work-project__gallery-reveal {
     grid-template-rows: 1fr;
     opacity: 1;
@@ -525,6 +526,7 @@ select {
   .work-project__gallery-inner,
   .work-project__image,
   .work-project__arrow,
+  .work-project__details,
   .work-project__tags,
   .work-project__place {
     transition: none !important;

@@ -17,13 +17,13 @@ import Footer from './components/Footer'
 import { ToTop } from './components/Utilities'
 import ThemeToggle from './components/ThemeToggle'
 
-const THEME_STORAGE_KEY = 'zk-theme-preference-v2'
+const THEME_STORAGE_KEY = 'zk-theme-preference-v4'
 
 function getInitialTheme() {
   try {
-    return localStorage.getItem(THEME_STORAGE_KEY) === 'dark' ? 'dark' : 'light'
+    return localStorage.getItem(THEME_STORAGE_KEY) === 'light' ? 'light' : 'dark'
   } catch {
-    return 'light'
+    return 'dark'
   }
 }
 
@@ -34,7 +34,7 @@ export default function App() {
 
   useLayoutEffect(() => {
     document.documentElement.dataset.theme = theme
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#050507' : '#f7f6fa')
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#050505' : '#f7f7f7')
     try {
       localStorage.setItem(THEME_STORAGE_KEY, theme)
     } catch {

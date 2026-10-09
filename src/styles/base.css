@@ -28,21 +28,21 @@
 
 /* ---------- tokens ---------- */
 :root {
-  --bg: #050507;
-  --bg-soft: #0a0a11;
-  --panel: #0e0e16;
-  --ink: #f5f5f8;
-  --dim: rgba(245, 245, 248, 0.58);
-  --dimmer: rgba(245, 245, 248, 0.28);
+  --bg: #050505;
+  --bg-soft: #0a0a0a;
+  --panel: #0e0e0e;
+  --ink: #f5f5f5;
+  --dim: rgba(245, 245, 245, 0.58);
+  --dimmer: rgba(245, 245, 245, 0.28);
   --line: rgba(255, 255, 255, 0.1);
   --line-strong: rgba(255, 255, 255, 0.2);
 
-  --violet: #6d3bf5;
-  --violet-lt: #a98cff;
-  --cyan: #35b9f0;
-  --blue: #1e7bd6;
-  --orange: #ff4a00;
-  --orange-deep: #d63a00;
+  --violet: #3752a5;
+  --violet-lt: #3752a5;
+  --cyan: #3752a5;
+  --blue: #3752a5;
+  --orange: #3752a5;
+  --orange-deep: #3752a5;
 
   --font-display: 'Sora', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
@@ -128,10 +128,10 @@ ol {
   width: 9px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a11;
+  background: #0a0a0a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #26263a;
+  background: #262626;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -175,7 +175,7 @@ ol {
   color: var(--dimmer);
 }
 .muted-grad {
-  color: rgba(245, 245, 248, 0.16);
+  color: rgba(245, 245, 245, 0.16);
 }
 
 /* section kicker: ● BRAND & WEBSITES FOR TECH STARTUPS / */
@@ -307,7 +307,7 @@ ol {
 }
 .btn--solid {
   background: var(--ink);
-  color: #08080c;
+  color: #080808;
   border-color: var(--ink);
 }
 .btn--solid::before {
@@ -428,7 +428,7 @@ ol {
 .cursor.is-hover .cursor__ring {
   width: 86px;
   height: 86px;
-  background: rgba(109, 59, 245, 0.92);
+  background: rgba(55, 82, 165, 0.92);
   border-color: transparent;
 }
 .cursor.is-hover .cursor__dot {
@@ -448,7 +448,7 @@ ol {
   position: fixed;
   inset: 0;
   z-index: 9800;
-  background: #050507;
+  background: #050505;
   display: grid;
   place-items: center;
 }
@@ -501,7 +501,7 @@ ol {
   font-size: 0.6rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(245, 245, 248, 0.35);
+  color: rgba(245, 245, 245, 0.35);
 }
 
 /* ---------- marquee ---------- */

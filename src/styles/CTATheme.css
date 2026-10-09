@@ -1,10 +1,10 @@
-/* Primary consultation button: project purple theme */
+/* Primary consultation button: project blue theme */
 .cta a.btn.btn--project {
-  border-color: #9279da !important;
-  background-color: #9279da !important;
+  border-color: #3752a5 !important;
+  background-color: #3752a5 !important;
   background-image: none !important;
   color: #ffffff !important;
-  box-shadow: 0 8px 24px rgba(146, 121, 218, 0.16);
+  box-shadow: 0 8px 24px rgba(55, 82, 165, 0.16);
   transition:
     background-color 300ms ease,
     border-color 300ms ease,
@@ -28,13 +28,13 @@
 }
 
 .cta a.btn.btn--project:focus-visible {
-  outline: 2px solid #7a5cd4;
+  outline: 2px solid #3752a5;
   outline-offset: 4px;
 }
 
 /* Keep any existing button overlay in the project palette. */
 .cta a.btn.btn--project::before {
-  background-color: #8d6deb !important;
+  background-color: #3752a5 !important;
 }
 
 /* Reduced-motion support */

@@ -43,17 +43,17 @@ const rotRect = (cx, cy, L, w, deg) => {
 
 const PIECES = [
   // K stem (full height, partly hidden behind the Z bars)
-  { id: 'stem', pts: rect(782, 112, 856, 568), z: 0, c: '#7c4dff', r: 0.24 },
+  { id: 'stem', pts: rect(782, 112, 856, 568), z: 0, c: '#3752a5', r: 0.24 },
   // Z diagonal (tucks behind the stem)
-  { id: 'z-diag', pts: [[727, 258], [838, 258], [713, 420], [602, 420]], z: -0.28, c: '#6d3bf5', r: 0.16 },
+  { id: 'z-diag', pts: [[727, 258], [838, 258], [713, 420], [602, 420]], z: -0.28, c: '#3752a5', r: 0.16 },
   // Z top bar
-  { id: 'z-top', pts: rect(592, 177, 832, 240), z: 0.34, c: '#8b5cff', r: 0.22 },
+  { id: 'z-top', pts: rect(592, 177, 832, 240), z: 0.34, c: '#3752a5', r: 0.22 },
   // Z bottom bar
-  { id: 'z-bot', pts: rect(594, 432, 846, 496), z: 0.34, c: '#4a1fd0', r: 0.22 },
+  { id: 'z-bot', pts: rect(594, 432, 846, 496), z: 0.34, c: '#3752a5', r: 0.22 },
   // K upper arm
-  { id: 'k-up', pts: rotRect(915, 248, 145, 62, 41), z: 0.12, c: '#7c4dff', r: 0.2 },
+  { id: 'k-up', pts: rotRect(915, 248, 145, 62, 41), z: 0.12, c: '#3752a5', r: 0.2 },
   // K lower arm
-  { id: 'k-dn', pts: rotRect(932, 422, 162, 66, -48), z: 0.12, c: '#5f30ea', r: 0.2 },
+  { id: 'k-dn', pts: rotRect(932, 422, 162, 66, -48), z: 0.12, c: '#3752a5', r: 0.2 },
 ]
 
 /* polygon -> Shape with rounded corners (points are local, centered on the piece) */
@@ -86,7 +86,7 @@ const PIXELS = [
   [4.2, -2.4, -1.7], [3.35, -3.15, -2.2], [-1.2, -3.9, -2.4], [0.35, -3.2, -1.2],
 ]
 
-const PIXEL_COLORS = ['#35b9f0', '#1e7bd6', '#7c4dff', '#a98cff', '#2f9be0']
+const PIXEL_COLORS = ['#3752a5', '#ffffff', '#3752a5', '#d0d0d0', '#3752a5']
 
 /* used when no reveal ref is passed: everything visible */
 const SHOW_ALL = { left: 1, right: 1 }
@@ -275,8 +275,8 @@ function Scene({ reduced, active, onBeat, reveal }) {
   return (
     <>
       <ambientLight intensity={0.35} />
-      <directionalLight position={[5, 8, 6]} intensity={1.15} color="#c9b8ff" />
-      <directionalLight position={[-7, -2, -4]} intensity={0.7} color="#2f7fd6" />
+      <directionalLight position={[5, 8, 6]} intensity={1.15} color="#ffffff" />
+      <directionalLight position={[-7, -2, -4]} intensity={0.7} color="#bfbfbf" />
 
       <group ref={group}>
         <Float
@@ -293,11 +293,11 @@ function Scene({ reduced, active, onBeat, reveal }) {
 
       {/* studio lighting built from lightformers — no external HDR fetch */}
       <Environment resolution={192} frames={1}>
-        <color attach="background" args={['#050507']} />
-        <Lightformer intensity={2.6} form="rect" color="#a98cff" position={[-5, 4, 4]} scale={[8, 8, 1]} target={[0, 0, 0]} />
-        <Lightformer intensity={2} form="rect" color="#35b9f0" position={[5, -3, 3]} scale={[7, 7, 1]} target={[0, 0, 0]} />
+        <color attach="background" args={['#050505']} />
+        <Lightformer intensity={2.6} form="rect" color="#ffffff" position={[-5, 4, 4]} scale={[8, 8, 1]} target={[0, 0, 0]} />
+        <Lightformer intensity={2} form="rect" color="#bfbfbf" position={[5, -3, 3]} scale={[7, 7, 1]} target={[0, 0, 0]} />
         <Lightformer intensity={1.4} form="circle" color="#ffffff" position={[0, 6, -6]} scale={[6, 6, 1]} target={[0, 0, 0]} />
-        <Lightformer intensity={0.9} form="rect" color="#ff4a00" position={[-6, -5, -3]} scale={[6, 6, 1]} target={[0, 0, 0]} />
+        <Lightformer intensity={0.9} form="rect" color="#ffffff" position={[-6, -5, -3]} scale={[6, 6, 1]} target={[0, 0, 0]} />
       </Environment>
     </>
   )

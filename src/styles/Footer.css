@@ -4,9 +4,10 @@
 }
 
 .footer {
-  --footer-black: #050507;
+  --footer-black: #050505;
   --footer-white: #ffffff;
-  --footer-purple: #9279da;
+  --footer-purple: #3752a5;
+  --footer-purple-text: #3752a5;
   --footer-muted: rgba(255, 255, 255, 0.56);
   --footer-line: rgba(255, 255, 255, 0.14);
 
@@ -100,7 +101,7 @@
 .footer__cta-arrow {
   display: inline-flex;
   flex: 0 0 auto;
-  color: var(--footer-purple);
+  color: var(--footer-purple-text);
 }
 
 .footer__cta-arrow svg {
@@ -271,7 +272,7 @@
 
 .footer .ticker__item::after {
   margin-inline: 30px;
-  color: var(--footer-purple);
+  color: var(--footer-purple-text);
   content: "✳";
 }
 
